@@ -1,0 +1,55 @@
+
+al mazidi 8051( for topic A-G)  
+A. LED Interfacing
+B. Sensor Interfacing: connection pin out , 3 wire wire, 4 wire(4 th wire used for calbration readout , eg. laser sensor)
+C. Analog-to-Digital Converter (ADC): Architecture
+D. Timer and Pulse Width Modulation (PWM): signal generation: vary speed(vary pwm signal on off time) 
+E. Universal Asynchronous Receiver-Transmitter (UART):serial communication  port ( baud rate 1200/2400/4800/9600/../ 22400, start stop bit,data bit lendh, ctc;  rs232 to rs485/ rj45(ethernet communication) 
+F. Serial Peripheral Interface (SPI): 2 wire communciation   masterslave 
+G. Inter-Integrated Circuit (I2C): high speed update data: lcd disply, log data
+H. Controller Area Network (CAN): vector gmbh  lead this communication  can is open source protocol:  ip  belong to bosch , 2 wire in,- max leanght of communication, end connection are terminated - 120ohm/60 ohm 
+I. Local Interconnect Network (LIN): short distance / data format change
+
+tool: 
+Vector CAN/CANoe tool 30 DAYS  
+autosar elctrobit 15 DAYS 
+
+
+LED interfacing: 
+memory 1 
+
+start  address: 0000h
+stop address: 00ffh
+memory 2 
+start address: 0100h
+stop address: 
+
+PC: 16bit there 16 address line
+2 ^16 : total memory addressing
+
+1f+1f
+1000 1111
++1000 1111
+----------
+1 0000
+
+UART 
+
+CONTROLLER PIN  INTERFACE PIN
+
+	RX	TX 
+	TX 	RX
+
+	guard bit: 
+		1. To ensure no memory address overlap during data transfer
+		2. 
+		
+c+=c = c = c+c update count on each interval of program execution
+
+c++ = display last  value of count
+
+
+
+
+		
+		

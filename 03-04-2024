@@ -1,0 +1,26 @@
+
+SPI : serial peripheral interface-  ADC/DAC, display lcd, memory card data read write 
+	1. h/w interface -covered  for display 
+		SS/CS = 0/1 = P2.0
+		SCLK/CLK = P2.1
+		DATA IN(DI)/MOSI= P2.2
+		Data out (DO)/ MISOU=P2.3
+		 
+		 @0XFD = BAUD RATE VALUE
+	SPDR = SPI DATA register  = 8 bit register 
+	SPSR = SPI STATUS REGISTER = 8 BIT ( HGHER SIDE 2 BITS ARED USE SPIF(SP INTERRUPT FLAG, WCOLL(WRITE COLLISION))
+	SPCR = SPI CPMTOL REGISTER =  8 BIT ( SPIE= SERIAL PERIPHERAL INTERRUPT ENABLE, , SPE-enable SPI, DORD=, MSTR= 0-SLAVE/1- MASTER, CPOL= 0-SCLK CLEAR/1 SCLK SET, CPOL)
+	
+	
+	
+		  
+ 	2. register configuration
+ 			
+ 			
+ 	
+UART: Universal asynchronous receiver trnasmitter 
+	1. h/w interface covered 
+	
+CAN : Controlled area Network
+
+
