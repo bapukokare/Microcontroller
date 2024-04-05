@@ -1,0 +1,107 @@
+
+SPI : serial peripheral interface-  ADC/DAC, display lcd, memory card data read write 
+	1. h/w interface -covered  for display 
+		this is for 8051
+		SS/CS = 0/1 = P2.0
+		SCLK/CLK = P2.1
+		DATA IN(DI)/MOSI= P2.2
+		Data out (DO)/ MISO=P2.3
+		
+		 @0XFD = BAUD RATE VALUE
+	<reg51.h> @0x80.1 port 0.0 
+	
+	SPDR = SPI DATA register  = 8 bit register 
+	SPSR = SPI STATUS REGISTER = 8 BIT ( HGHER SIDE 2 BITS ARED USE SPIF(SP INTERRUPT FLAG, WCOLL(WRITE COLLISION))
+	SPCR = SPI CONTROL REGISTER =  8 BIT ( SPIE= SERIAL PERIPHERAL INTERRUPT ENABLE, , SPE-enable SPI, DORD=, MSTR= 0-SLAVE/1- MASTER, CPOL= 0-SCLK CLEAR/1 SCLK SET, CPOL)
+	
+to enable serial peripheral interface m
+	
+		  
+ 	2. register configuration
+ 	
+#############################################################
+5th april 2024
+ 			
+ 	
+UART: Universal asynchronous receiver trnasmitter 
+	1. h/w interface covered 
+	synchornoous 
+	
+	RX -TX
+	TX- RX
+	CONNECT DB9 Pin connector m/f
+	rj45 -ethernet communication
+	rs232 - serial communication 
+	
+	 s/w programming 
+	 
+	 start bit 1 
+	 stop bit 1
+	 data bit  5
+	 baud rate 9600/4800/2400/1200
+	 
+	 serial communication 
+	 
+	 SBUF : SERIAL BUFFER REGISTER 
+	 SCON : SERIAL CONTROL REGISTER(SM0/SM1: BAAUD RATE FREQUENCY,SM2: ENBL MULTIPROCESSOR COMMUNICATION, REN: RX ENABLE,  TB8: 9TH tX BIT, RB8: 9 TH RECEIVE  BIT, TI: TX INTERRUPT FLAG, RI- RX INTERRUPT FLAG)
+	 
+	 PROGRAMMING: 
+	 	1. CONFIGURE TIME IN AUTO RELOAD MODE
+	 	2. TH1 = 0XFD;  9600
+	 	3. LAOD SCON: MODE 1 ENABLE RECEPTION  (MODE 1 = 8 BIT UART WITH TIME 1 determined baud rate , please check serial mode specifier? 
+	 	4. start timer1 by setting TR1 =1 check TIMER REGISTER?
+	 	while (true)
+	 	{
+	 	5. lOAD  tx data in sbuf register 
+	 	6. wait until loaded data is completerly t by polling ti flag 
+	 	7. When the ti flag is set clear is and repeat from step 5 
+	 	}
+	 	
+	 	
+CAN : CONTROLLER AREA NETWORK 
+	standar can = 11 bit 
+	extended can = 29 bits 
+	
+	please go through n/w layer 
+	
+	can bus h/w connection: how multiple can protocol can be connected 
+	for me share the link the electric vehicle: 
+	
+	share picctue of of ISO 11898 AND OSI ARCHITECTURE 
+	
+	https://en.wikipedia.org/wiki/CAN_bus : PLEAS GO THROUGH CAN BUS 
+	
+	:arbittrary bit, allow only one one to transmit data at a time
+	
+	recommend: pls go thru vector can bus video
+	
+	
+	
+	 
+	
+	
+		
+
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	 	
+	  
+	 
+	 
+	 
+	 
+CAN : Controlled area Network
+
+
